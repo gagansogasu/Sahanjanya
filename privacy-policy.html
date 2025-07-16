@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahajanya Multipurpose Co-op.Ltd.</title>
+    <meta name="description"
+        content="Sahajanya Multipurpose Co-op.Ltd. - Empowering your financial journey with innovative banking solutions.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Hover Dropdown Styles */
+        .privacy-container {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--ub-gray);
+            max-width: 1200px;
+            margin: 32px auto 0 auto;
+            padding: 0 8px;
+            width: 100%;
+        }
+        .privacy-content {
+            background: var(--ub-white);
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 32px 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .privacy-title {
+            font-size: 2rem;
+            color: var(--ub-blue);
+            border-bottom: 2px solid var(--ub-red);
+            padding-bottom: 8px;
+            margin-top: 32px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .privacy-section-title {
+            font-size: 1.35rem;
+            color: var(--ub-red);
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .privacy-subsection-title {
+            font-size: 1.1rem;
+            color: var(--ub-blue);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .privacy-intro {
+            font-size: 1.05rem;
+            color: var(--ub-gray);
+            margin-bottom: 18px;
+        }
+        .privacy-update {
+            font-size: 0.98rem;
+            color: #666;
+            margin-bottom: 22px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 18px;
+        }
+        .privacy-text {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 14px;
+        }
+        .privacy-definitions {
+            padding-left: 18px;
+            border-left: 3px solid var(--ub-gold);
+            margin-bottom: 18px;
+        }
+        .privacy-definitions p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 12px;
+        }
+        .privacy-list {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .privacy-list li {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 8px;
+            list-style: disc inside;
+        }
+        .privacy-list li strong {
+            color: var(--ub-blue);
+        }
+        @media (max-width: 900px) {
+            .privacy-container {
+                max-width: 98vw;
+                padding: 0 2vw;
+            }
+            .privacy-content {
+                padding: 18px 6px;
+            }
+        }
+        @media (max-width: 600px) {
+            .privacy-content {
+                padding: 12px 2px;
+            }
+            .privacy-title {
+                font-size: 1.3rem;
+            }
+            .privacy-section-title {
+                font-size: 1.1rem;
+            }
+            .privacy-definitions {
+                padding-left: 10px;
+            }
+        }
+        @media (min-width: 992px) {
+            .navbar .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .navbar .dropdown-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+                border: none;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-item {
+                padding: 0.5rem 1.5rem;
+                font-size: 0.9rem;
+                color: #333;
+                transition: all 0.2s;
+            }
+
+            .dropdown-item:hover {
+                background-color: #f8f9fa;
+                color: #e30613;
+                padding-left: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar bg-gradient-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span>SAHAJANYA MULTIPURPOSE SOUHARDA CO-OP. LTD.</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-outline-light rounded-pill px-3" id="languageToggle">
+                    <i class="fas fa-globe me-1"></i>
+                    <span id="langBtnText">ಕನ್ನಡ</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 py-2" href="index.html">
+                <img src="images/logo.png" alt="Sahajanya Bank" class="logo" style="height:48px;width:auto;">
+                <div class="d-none d-md-block">
+                    <span class="fw-bold text-primary fs-4 lh-1">Sahajanya Multipurpose Co-op.Ltd.</span><br>
+                    <span class="text-muted small lh-1">A SMSCL Enterprise</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto text-uppercase fw-semibold gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">Overview</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="financialServicesDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            Financial Services <i class="fas fa-chevron-down ms-1 small"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="financialServicesDropdown">
+                            <li><a class="dropdown-item" href="loan-schemes.html"><i
+                                        class="fas fa-hand-holding-usd me-2"></i>Loans</a></li>
+                            <li><a class="dropdown-item" href="deposit-schemes.html"><i
+                                        class="fas fa-piggy-bank me-2"></i>Fixed Deposits</a></li>
+                            <li><a class="dropdown-item active" href="savings-schemes.html"><i
+                                        class="fas fa-wallet me-2"></i>Savings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto text-uppercase fw-semibold">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="downloadsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            Downloads <i class="fas fa-chevron-down ms-1 small"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="downloadsDropdown">
+                            <li><a class="dropdown-item" href="downloads.html"><i class="fas fa-file-pdf me-2"></i>All
+                                    Forms</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="sb forms.pdf" target="_blank"><i
+                                        class="fas fa-file-alt me-2"></i>SB Account Forms</a></li>
+                            <li><a class="dropdown-item" href="Term Deposit Account Opening Form - 51A.pdf"
+                                    target="_blank"><i class="fas fa-file-invoice me-2"></i>Term Deposit Form</a></li>
+                            <li><a class="dropdown-item" href="rd.pdf" target="_blank"><i
+                                        class="fas fa-file-contract me-2"></i>Recurring Deposit Form</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="privacy-container">
+        <div class="privacy-content">
+            <p class="privacy-intro">
+                <strong>Sahajanya Multipurpose Co-op. Ltd.</strong> (Registration No.7/ARBI dated 18.04.1962) is a cooperative society registered under the Karnataka Co-operative Societies Act. We are committed to protecting the privacy and security of our members' personal information in accordance with applicable data protection laws and regulations.
+            </p>
+            <p class="privacy-update">
+                <i class="fas fa-calendar-alt me-2"></i>Last updated: July 16, 2025<br>
+                This Privacy Policy outlines how we collect, use, disclose, and safeguard the personal information of our members, website visitors, and other individuals who interact with our cooperative society.
+            </p>
+            <h1 class="privacy-title">1. Interpretation and Definitions</h1>
+            <h2 class="privacy-section-title">1.1 Interpretation</h2>
+            <p class="privacy-text">
+                The words in this Privacy Policy where the initial letter is capitalized have specific meanings defined under the following conditions. These definitions apply whether the terms appear in singular or plural form.
+            </p>
+            <h2 class="privacy-section-title">1.2 Definitions</h2>
+            <p class="privacy-text">
+                For the purposes of this Privacy Policy:
+            </p>
+            <div class="privacy-definitions">
+                <p><strong>Member</strong> means an individual who has been admitted to membership in Sahajanya Multipurpose Co-op. Ltd. in accordance with its by-laws.</p>
+                <p><strong>Personal Information</strong> means any information that relates to an identified or identifiable individual, including but not limited to name, address, contact details, identification numbers, financial information, and transaction history.</p>
+                <p><strong>Society</strong> or <strong>We/Us/Our</strong> refers to Sahajanya Multipurpose Co-op. Ltd., registered under the Karnataka Co-operative Societies Act.</p>
+                <p><strong>Services</strong> means all financial and non-financial services provided by the Society to its members, including but not limited to savings accounts, fixed deposits, recurring deposits, and loan facilities.</p>
+                <p><strong>Website</strong> refers to the Sahajanya Multipurpose Co-op. Ltd. website, accessible from <a href="https://sahajanya.co.in" target="_blank">sahajanya.co.in</a>.</p>
+                <p><strong>You/Your</strong> refers to the individual accessing or using our Services, or the company, or other legal entity on behalf of which such individual is accessing or using the Services.</p>
+                <p><strong>KYC</strong> means Know Your Customer, the process of verifying the identity of our members as per regulatory requirements.</p>
+                <p><strong>Regulatory Authorities</strong> includes but is not limited to the Registrar of Co-operative Societies, Reserve Bank of India (RBI), National Bank for Agriculture and Rural Development (NABARD), and other relevant government or regulatory bodies.</p>
+            </div>
+            <h1 class="privacy-title">2. Information We Collect</h1>
+            <h2 class="privacy-section-title">2.1 Personal Information We Collect</h2>
+            <p class="privacy-text">
+                In the course of providing our Services, we may collect the following types of personal information:
+            </p>
+            <ul class="privacy-list">
+                <li><strong>Identification Information:</strong> Full name, date of birth, gender, photograph, signature, PAN, Aadhaar number, Voter ID, Passport details, or other government-issued identification.</li>
+                <li><strong>Contact Information:</strong> Residential address, email address, telephone/mobile numbers, and emergency contact details.</li>
+                <li><strong>Employment Information:</strong> Employer details, employee ID, designation, department, and employment history (for CGST and Customs staff).</li>
+                <li><strong>Financial Information:</strong> Income details, bank account information, credit history, loan details, transaction history, and tax-related information.</li>
+                <li><strong>KYC Documents:</strong> Copies of identity proof, address proof, income proof, and other documents submitted for account opening or loan processing.</li>
+                <li><strong>Technical Data:</strong> IP address, browser type, device information, and usage details when you visit our website or use our digital services.</li>
+            </ul>
+            <h2 class="privacy-section-title">2.2 How We Collect Your Information</h2>
+            <p class="privacy-text">
+                We collect information through various means, including:
+            </p>
+            <ul class="privacy-list">
+                <li><strong>Directly from you:</strong> When you apply for membership, open an account, apply for loans, or use our services.</li>
+                <li><strong>Regulatory and Government Authorities:</strong> As required by law, regulation, or legal process, including to comply with requests from the Registrar of Co-operative Societies, RBI, NABARD, tax authorities, or other government bodies.</li>
+                <li><strong>Credit Bureaus:</strong> To report credit information and obtain credit reports for loan processing and credit assessment.</li>
+                <li><strong>Banks and Financial Institutions:</strong> For processing transactions, payment settlements, and other banking operations.</li>
+                <li><strong>Service Providers:</strong> Third-party vendors who perform services on our behalf, such as IT service providers, payment processors, auditors, and consultants.</li>
+                <li><strong>Legal and Professional Advisors:</strong> Lawyers, auditors, and other professional advisors as needed for our business operations.</li>
+                <li><strong>Other Members:</strong> As required by cooperative society laws, certain member information may be shared with other members during general body meetings or as part of the society's records.</li>
+                <li><strong>With Your Consent:</strong> We may share your information with other third parties when you have given us your explicit consent to do so.</li>
+            </ul>
+            <p class="privacy-text">
+                We require all third parties to respect the security of your personal information and to treat it in accordance with the law. We do not sell your personal information to third parties for marketing purposes.
+            </p>
+            <h1 class="privacy-title">5. Data Retention and Security</h1>
+            <h2 class="privacy-section-title">5.1 Data Retention</h2>
+            <p class="privacy-text">
+                We will retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, regulatory, accounting, or reporting requirements. The retention period may extend beyond your relationship with us, as required by applicable laws and regulations, including but not limited to:
+            </p>
+            <ul class="privacy-list">
+                <li>10 years for member account records after the account is closed, as per co-operative society regulations.</li>
+                <li>7 years for financial transaction records as per tax and accounting requirements.</li>
+                <li>Lifetime retention for certain records as required by the Karnataka Co-operative Societies Act and Rules.</li>
+            </ul>
+            <p class="privacy-text">
+                When personal information is no longer needed, we will securely destroy or anonymize it in accordance with our data retention and destruction policies.
+            </p>
+
+            <h2 class="privacy-section-title">5.2 Data Security</h2>
+            <p class="privacy-text">
+                We implement appropriate technical and organizational measures to protect your personal information against unauthorized or unlawful processing, accidental loss, destruction, or damage. These measures include:
+            </p>
+            <ul class="privacy-list">
+                <li>Secure storage of physical records in locked cabinets with restricted access.</li>
+                <li>Encryption of electronic data and secure transmission of information.</li>
+                <li>Regular security assessments and updates to our systems.</li>
+                <li>Access controls and authentication mechanisms.</li>
+                <li>Staff training on data protection and confidentiality.</li>
+            </ul>
+            <p class="privacy-text">
+                While we strive to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. Therefore, we cannot guarantee absolute security, and you provide your personal information at your own risk.
+            </p>
+            <h1 class="privacy-title">6. Your Rights and Choices</h1>
+            <p class="privacy-text">
+                As a member or user of our services, you have certain rights regarding your personal information:
+            </p>
+            <ul class="privacy-list">
+                <li><strong>Access:</strong> You can request access to the personal information we hold about you.</li>
+                <li><strong>Correction:</strong> You can request correction of any inaccurate or incomplete personal information.</li>
+                <li><strong>Withdraw Consent:</strong> Where we rely on your consent to process your personal information, you have the right to withdraw that consent at any time.</li>
+                <li><strong>Object to Processing:</strong> You may object to the processing of your personal information in certain circumstances.</li>
+                <li><strong>Lodge a Complaint:</strong> You have the right to lodge a complaint with the relevant data protection authority if you believe your rights have been violated.</li>
+            </ul>
+            <p class="privacy-text">
+                To exercise any of these rights, please contact us using the details provided in the "Contact Us" section below. We may need to verify your identity before processing your request.
+            </p>
+
+            <h1 class="privacy-title">7. Changes to This Privacy Policy</h1>
+            <p class="privacy-text">
+                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this Privacy Policy.
+            </p>
+            <p class="privacy-text">
+                You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. Your continued use of our services after such changes constitutes your acceptance of the revised Privacy Policy.
+            </p>
+
+            <h1 class="privacy-title">8. Contact Us</h1>
+            <p class="privacy-text">
+                If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
+            </p>
+            <div class="privacy-contact">
+                <p><i class="fas fa-envelope me-2"></i> <strong>Email:</strong> <a href="mailto:smscl2013@gmail.com">smscl2013@gmail.com</a></p>
+                <p><i class="fas fa-phone me-2"></i> <strong>Phone:</strong> +91 080-2339 0310</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <strong>Address:</strong>No 996/22/2,4th cross,RPC layout,Hampi Nagara, Bangalore, Karnataka-560104</p>
+            </div>
+            <p class="privacy-text mt-3">
+                For any data protection-related queries or to exercise your rights, you may also contact our Data Protection Officer at the above address or email.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer (reuse from index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="contact-us.html" class="footer-link">Contact Us</a></li>
+                        <div class="footer-contact-list">
+                            <span><i class="fas fa-phone-alt me-2"></i> <a href="tel:08023390310"
+                                    class="footer-link">080-2339 0310</a></span>
+                            <span><i class="fas fa-envelope me-2"></i> <a href="mailto:smscl2013@gmail.com"
+                                    class="footer-link">smscl2013@gmail.com</a></span>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Customer Service</h5>
+                    <ul class="list-unstyled mb-0">
+
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHiXABtn7mR0AqUjRT8B_Knq67HdVcA6Z1qYheklXk-znwg/viewform"
+                                class="footer-link" target="_blank" rel="noopener">Complaints</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHiXABtn7mR0AqUjRT8B_Knq67HdVcA6Z1qYheklXk-znwg/viewform"
+                                class="footer-link" target="_blank" rel="noopener">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Address</h5>
+                    <address class="text-white-50 mb-0">
+                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> N0 996/22/2,4th cross,RPC
+                            layout,Hampi Nagara, Bangalore, Karnataka-560104</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Sahajanya Bank. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Language Translation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const languageToggle = document.getElementById('languageToggle');
+            const langBtnText = document.getElementById('langBtnText');
+            let currentLang = 'en'; // Default language is English
+
+            // Translations object
+            const translations = {
+                en: {
+                    welcome: "Welcome to Sahajanya",
+                    tagline: "Banking Made Simple, Secure & Rewarding",
+                    description: "Experience the future of banking with our innovative digital solutions tailored for your needs.",
+                    openAccount: "Open Account",
+                    downloadApp: "Download App",
+                    // Add more translations as needed
+                },
+                kn: {
+                    welcome: "ಸಹಜನ್ಯ ಬ್ಯಾಂಕ್‌ಗೆ ಸುಸ್ವಾಗತ",
+                    tagline: "ಬ್ಯಾಂಕಿಂಗ್ ಅನ್ನು ಸರಳ, ಸುರಕ್ಷಿತ ಮತ್ತು ಲಾಭದಾಯಕವಾಗಿ ಮಾಡಿ",
+                    description: "ನಿಮ್ಮ ಅಗತ್ಯಗಳಿಗೆ ತರಪೇತಿ ನೀಡಲಾದ ನಮ್ಮ ನಾವೀನ್ಯತೆಯುತ ಡಿಜಿಟಲ್ ಪರಿಹಾರಗಳೊಂದಿಗೆ ಬ್ಯಾಂಕಿಂಗ್‌ನ ಭವಿಷ್ಯವನ್ನು ಅನುಭವಿಸಿ.",
+                    openAccount: "ಖಾತೆ ತೆರೆಯಿರಿ",
+                    downloadApp: "ಅಪ್ಲಿಕೇಶನ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+                    // Add more translations as needed
+                }
+            };
+
+            // Function to toggle language
+            function toggleLanguage() {
+                currentLang = currentLang === 'en' ? 'kn' : 'en';
+                updateLanguage();
+                // Save preference to localStorage
+                localStorage.setItem('preferredLanguage', currentLang);
+            }
+
+            // Function to update page content based on language
+            function updateLanguage() {
+                const lang = translations[currentLang];
+
+                // Update button text
+                langBtnText.textContent = currentLang === 'en' ? 'ಕನ್ನಡ' : 'English';
+
+                // Update page content
+                const elements = document.querySelectorAll('[data-translate]');
+                elements.forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (lang[key]) {
+                        element.textContent = lang[key];
+                    }
+                });
+
+                // Update direction if needed (for RTL languages)
+                document.documentElement.lang = currentLang;
+                document.documentElement.dir = currentLang === 'kn' ? 'ltr' : 'ltr';
+            }
+
+            // Add click event to language toggle button
+            languageToggle.addEventListener('click', toggleLanguage);
+
+            // Check for saved language preference
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                currentLang = savedLang;
+                updateLanguage();
+            }
+        });
+    </script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
