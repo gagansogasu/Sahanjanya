@@ -188,12 +188,6 @@
             <div class="d-flex align-items-center gap-3">
                 <span>SAHAJANYA MULTIPURPOSE SOUHARDA CO-OP. LTD.</span>
             </div>
-            <div class="d-flex align-items-center gap-3">
-                <button class="btn btn-sm btn-outline-light rounded-pill px-3" id="languageToggle">
-                    <i class="fas fa-globe me-1"></i>
-                    <span id="langBtnText">ಕನ್ನಡ</span>
-                </button>
-            </div>
         </div>
     </div>
 
@@ -639,8 +633,8 @@
                 <div class="col-md-3">
                     <h5>Address</h5>
                     <address class="text-white-50 mb-0">
-                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> N0 996/22/2,4th cross,RPC
-                            layout,Hampi Nagara, Bangalore, Karnataka-560104</p>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> No. 996/22/2, 4th Cross, R.P.C.
+                            Layout, Hampinagar, (Opp. SBI ATM) Bengaluru - 560104</p>
                     </address>
                 </div>
             </div>
@@ -655,78 +649,8 @@
             </div>
         </div>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Language Translation -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const languageToggle = document.getElementById('languageToggle');
-            const langBtnText = document.getElementById('langBtnText');
-            let currentLang = 'en'; // Default language is English
-
-            // Translations object
-            const translations = {
-                en: {
-                    welcome: "Welcome to Sahajanya",
-                    tagline: "Banking Made Simple, Secure & Rewarding",
-                    description: "Experience the future of banking with our innovative digital solutions tailored for your needs.",
-                    openAccount: "Open Account",
-                    downloadApp: "Download App",
-                    // Add more translations as needed
-                },
-                kn: {
-                    welcome: "ಸಹಜನ್ಯ ಬ್ಯಾಂಕ್‌ಗೆ ಸುಸ್ವಾಗತ",
-                    tagline: "ಬ್ಯಾಂಕಿಂಗ್ ಅನ್ನು ಸರಳ, ಸುರಕ್ಷಿತ ಮತ್ತು ಲಾಭದಾಯಕವಾಗಿ ಮಾಡಿ",
-                    description: "ನಿಮ್ಮ ಅಗತ್ಯಗಳಿಗೆ ತರಪೇತಿ ನೀಡಲಾದ ನಮ್ಮ ನಾವೀನ್ಯತೆಯುತ ಡಿಜಿಟಲ್ ಪರಿಹಾರಗಳೊಂದಿಗೆ ಬ್ಯಾಂಕಿಂಗ್‌ನ ಭವಿಷ್ಯವನ್ನು ಅನುಭವಿಸಿ.",
-                    openAccount: "ಖಾತೆ ತೆರೆಯಿರಿ",
-                    downloadApp: "ಅಪ್ಲಿಕೇಶನ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
-                    // Add more translations as needed
-                }
-            };
-
-            // Function to toggle language
-            function toggleLanguage() {
-                currentLang = currentLang === 'en' ? 'kn' : 'en';
-                updateLanguage();
-                // Save preference to localStorage
-                localStorage.setItem('preferredLanguage', currentLang);
-            }
-
-            // Function to update page content based on language
-            function updateLanguage() {
-                const lang = translations[currentLang];
-
-                // Update button text
-                langBtnText.textContent = currentLang === 'en' ? 'ಕನ್ನಡ' : 'English';
-
-                // Update page content
-                const elements = document.querySelectorAll('[data-translate]');
-                elements.forEach(element => {
-                    const key = element.getAttribute('data-translate');
-                    if (lang[key]) {
-                        element.textContent = lang[key];
-                    }
-                });
-
-                // Update direction if needed (for RTL languages)
-                document.documentElement.lang = currentLang;
-                document.documentElement.dir = currentLang === 'kn' ? 'ltr' : 'ltr';
-            }
-
-            // Add click event to language toggle button
-            languageToggle.addEventListener('click', toggleLanguage);
-
-            // Check for saved language preference
-            const savedLang = localStorage.getItem('preferredLanguage');
-            if (savedLang) {
-                currentLang = savedLang;
-                updateLanguage();
-            }
-        });
-    </script>
-
     <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
